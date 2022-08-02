@@ -22,7 +22,6 @@ class Evaluate:
              self.stack.append(oprd)
 
     def validate_postfix_expression(self, exp):
-
         v = 0
         w = 0
         for ele in exp:
@@ -39,17 +38,17 @@ class Evaluate:
      def evaluate_Postfix_expression(text):
         s = Stack()
         for symbol in text:
-        if symbol in text:
-            s.push(int(symbol))
-        if not s.is_empty():
-            if symbol == "+":
-                plus = s.pop() + s.pop()
-            if symbol == "-":
-                plus = s.pop() - s.pop()
-            if symbol == "*":
-                plus = s.pop() * s.pop()
-            if symbol == "/":
-                plus = s.pop() / s.pop()
+            if symbol in text:
+                s.push(int(symbol))
+                if not s.is_empty():
+                    if symbol == "+":
+                        plus = s.pop() + s.pop()
+                    if symbol == "-":
+                        plus = s.pop() - s.pop()
+                     if symbol == "*":
+                        plus = s.pop() * s.pop()
+                     if symbol == "/":
+                        plus = s.pop() / s.pop()
 
 
 
