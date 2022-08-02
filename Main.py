@@ -30,15 +30,15 @@ class Evaluate:
                 v = v + 1
             else:
                 w = w + 1
-         if w == v - 1:
+            if w == v - 1:
                  return True
-         else:
+            else:
                 return False
 
 
      def evaluate_Postfix_expression(text):
         s = Stack()
-    for symbol in text:
+        for symbol in text:
         if symbol in text:
             s.push(int(symbol))
         if not s.is_empty():
