@@ -35,25 +35,25 @@ class Evaluate:
                 return False
 
 
-     def evaluate_Postfix_expression(text):
+     def evaluate_postfix_expression(text):
         s = Stack()
         for symbol in text:
-            if symbol in text:
+            if symbol in text: 
                 s.push(int(symbol))
-                if not s.is_empty():
-                    if symbol == "+":
-                        plus = s.pop() + s.pop()
-                    if symbol == "-":
-                        plus = s.pop() - s.pop()
-                     if symbol == "*":
-                        plus = s.pop() * s.pop()
-                     if symbol == "/":
-                        plus = s.pop() / s.pop()
+            if not s.is_empty():
+                if symbol == "+":
+                    plus = s.pop() + s.pop()
+                if symbol == "-":
+                    plus = s.pop() - s.pop()
+                if symbol == "*":
+                    plus = s.pop() * s.pop()
+                if symbol == "/":
+                    plus = s.pop() / s.pop()
 
 
 
 # Do not change the following code
-postfix_expression = input() # Read postfix expression
+Postfix_expression = input() # Read postfix expression
 tokens = postfix_expression.split()
 evaluate = Evaluate(len(tokens))
 if evaluate.validate_postfix_expression(tokens):
