@@ -21,7 +21,7 @@ class Evaluate:
         if self.top != self.size_of_stack - 1:
              self.stack.append(oprd)
 
-    def validate_postfix_expression(self, exp):
+    def validate_postfix_expression(self, expression):
         v = 0
         w = 0
         for ele in exp:
