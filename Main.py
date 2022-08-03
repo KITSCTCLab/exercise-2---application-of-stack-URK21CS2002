@@ -41,15 +41,15 @@ class Evaluate:
         for symbol in text:
             if symbol in text:
                 s.push(int(symbol))
-            if not s.is_empty():
-              if symbol == "+":
-                 plus = s.pop() + s.pop()
-              if symbol == "-":
-                plus = s.pop() - s.pop()
-              if symbol == "*":
-                plus = s.pop() * s.pop()
-              if symbol == "/":
-                plus = s.pop() / s.pop()
+                if not s.is_empty():
+                    if symbol == "+":
+                        plus = s.pop() + s.pop()
+                        if symbol == "-":
+                            plus = s.pop() - s.pop()
+                            if symbol == "*":
+                                plus = s.pop() * s.pop()
+                                if symbol == "/":
+                                    plus = s.pop() / s.pop()
 
 
 
