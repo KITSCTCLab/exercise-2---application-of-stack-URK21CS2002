@@ -17,43 +17,44 @@ class Evaluate:
             self.stack.pop()
 
 
-    def push(self, oprd):
+    def push(self, oprand):
         if self.top != self.size_of_stack - 1:
-             self.stack.append(oprd)
+             self.stack.append(oprand)
 
-    def validate_postfix_expression(self, exp):
+    def validate_postfix_expression(self, expression):
+
         v = 0
         w = 0
-        for ele in exp:
-            if ele.isnumeric():
+        for element in exp:
+            if element.isnumeric():
                 v = v + 1
             else:
                 w = w + 1
-            if w == v - 1:
-                 return True
-            else:
-                return False
+        if w == v - 1:
+            return True
+        else:
+            return False
 
 
-     def evaluate_postfix_expression(text):
+     def evaluate_Postfix_expression(text):
         s = Stack()
         for symbol in text:
-            if symbol in text: 
+            if symbol in text:
                 s.push(int(symbol))
             if not s.is_empty():
-                if symbol == "+":
-                    plus = s.pop() + s.pop()
-                if symbol == "-":
-                    plus = s.pop() - s.pop()
-                if symbol == "*":
-                    plus = s.pop() * s.pop()
-                if symbol == "/":
-                    plus = s.pop() / s.pop()
+              if symbol == "+":
+                 plus = s.pop() + s.pop()
+              if symbol == "-":
+                plus = s.pop() - s.pop()
+              if symbol == "*":
+                plus = s.pop() * s.pop()
+              if symbol == "/":
+                plus = s.pop() / s.pop()
 
 
 
 # Do not change the following code
-Postfix_expression = input() # Read postfix expression
+postfix_expression = input() # Read postfix expression
 tokens = postfix_expression.split()
 evaluate = Evaluate(len(tokens))
 if evaluate.validate_postfix_expression(tokens):
