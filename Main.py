@@ -43,12 +43,12 @@ class Evaluate:
                 if not s.is_empty():
                     if symbol == "+":
                         plus = s.pop() + s.pop()
-                        if symbol == "-":
-                            plus = s.pop() - s.pop()
-                            if symbol == "*":
-                                plus = s.pop() * s.pop()
-                                if symbol == "/":
-                                    plus = s.pop() / s.pop()
+                    if symbol == "-":
+                        plus = s.pop() - s.pop()
+                    if symbol == "*":
+                        plus = s.pop() * s.pop()
+                    if symbol == "/":
+                        plus = s.pop() / s.pop()
 
 
 
