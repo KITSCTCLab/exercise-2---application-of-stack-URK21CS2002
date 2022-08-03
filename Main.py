@@ -36,9 +36,9 @@ class Evaluate:
             return False
 
 
-     def evaluate_Postfix_expression(text):
-        s = Stack()
-        for symbol in text:
+    def evaluate_Postfix_expression(text):
+       s = Stack()
+       for symbol in text:
             if symbol in text:
                 s.push(int(symbol))
                 if not s.is_empty():
