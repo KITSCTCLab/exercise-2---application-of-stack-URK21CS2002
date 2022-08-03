@@ -25,7 +25,7 @@ class Evaluate:
 
         v = 0
         w = 0
-        for element in exp:
+        for element in expression:
             if element.isnumeric():
                 v = v + 1
             else:
