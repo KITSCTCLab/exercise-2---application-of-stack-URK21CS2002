@@ -36,7 +36,7 @@ class Evaluate:
             return False
 
 
-    def evaluate_Postfix_expression(text):
+     def evaluate_Postfix_expression(text):
        s = Stack()
        for symbol in text:
             if symbol in text:
