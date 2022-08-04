@@ -111,7 +111,7 @@ class Evaluate:
 # Do not change the following code
 postfix_expression = input()  # Read postfix expression
 tokens = postfix_expression.split()
-evaluate = Evaluate(len(tokens))
+evaluate = Evaluate()
 if evaluate.validate_postfix_expression(tokens):
     print(evaluate.evaluate_postfix_expression(tokens))
 else:
