@@ -54,7 +54,7 @@ class Evaluate:
                     elif i == '^':
                         stack[-2] = stack[-2] ^ stack[-1]
                         stack.pop()
-                        return int(stack[-1])
+                    return int(stack[-1])
 #Do not change the following code:
 postfix_expression = input() # Read postfix expression
 tokens = postfix_expression.split()
